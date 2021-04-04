@@ -1,3 +1,62 @@
+/*
+  ============================= */
+@font-face {
+  font-family: 'Digital';
+  src: URL('/fonts/digital.ttf') format('truetype');
+}
+:root {
+  --font: 'Digital';
+  --color: #00f7f7;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+body {
+  font-family: var(--font);
+  color: var(--color);
+}
+.container {
+  background-color: #000;
+  height: 100vh;
+}
+.clock {
+  width: 30rem;
+  margin: auto;
+  position: relative;
+  top: 30vh;
+}
+.period,
+.seconds {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 4rem;
+}
+.time {
+  font-size: 10rem;
+  padding-left: 1rem;
+}
+.seconds {
+  top: 5rem;
+}
+.date {
+  font-size: 2.4rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+.v-hidden {
+  visibility: hidden;
+}
+
 /* DEVELOPER
   ============================= */
 .dev {
