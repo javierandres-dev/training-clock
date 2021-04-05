@@ -50,7 +50,7 @@ function showClock() {
     hour = 12;
     period = 'AM';
   } else if (hours > 12) {
-    hour = setFormat(hours) - 12;
+    hour = hours - 12;
     period = 'PM';
   } else {
     hour = hours;
@@ -59,7 +59,7 @@ function showClock() {
   seconds % 2 === 0 ? (dots = '') : (dots = 'v-hidden');
   $period.textContent = `${period}`;
   $time.innerHTML = `
-    ${hour} <span class=${dots}>:</span> ${setFormat(minutes)}
+    ${hour}<span class=${dots}>:</span>${setFormat(minutes)}
   `;
   $seconds.textContent = `${setFormat(seconds)}`;
   $date.textContent = `${days[dayName]}, ${day} ${months[month]}, ${year}`;
